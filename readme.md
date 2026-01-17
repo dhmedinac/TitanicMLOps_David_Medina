@@ -92,8 +92,8 @@ pip install poetry
 ### 2. Clone the Repository
 
 ```bash
-git clone <your-repo-url>
-cd mlops-titanic-rf
+git clone https://github.com/dhmedinac/CapgeminiMLOps_David_Medina.git
+cd CapgeminiMLOps_David_Medina
 ```
 
 ---
