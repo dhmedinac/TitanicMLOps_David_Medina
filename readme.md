@@ -93,7 +93,7 @@ pip install poetry
 
 ```bash
 git clone https://github.com/dhmedinac/CapgeminiMLOps_David_Medina.git
-cd mlops-titanic-rf
+cd CapgeminiMLOps_David_Medina
 ```
 
 ---
