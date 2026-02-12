@@ -8,6 +8,7 @@
 ## pulll 2
 ## pulll 3
 ## pulll 4
+## pulll 5
 
 A clean, end-to-end **MLOps project** that trains a **Random Forest** model on the **public Titanic dataset** and serves predictions through a **Dockerized FastAPI service**, with **Poetry** for dependency management.
 
