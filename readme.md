@@ -1,14 +1,6 @@
 # MLOps Titanic Survival Prediction 2026 and month Feb
-# User b modifyng and C
-# adding D
-# modifying from the page
-# modifyin E
-# modifyin D
-## pulll
-## pulll 2
-## pulll 3
-## pulll 4
-## pulll 5
+# test owner modification 11
+
 
 A clean, end-to-end **MLOps project** that trains a **Random Forest** model on the **public Titanic dataset** and serves predictions through a **Dockerized FastAPI service**, with **Poetry** for dependency management.
 
