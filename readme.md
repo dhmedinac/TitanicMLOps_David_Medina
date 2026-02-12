@@ -3,6 +3,7 @@
 # adding D
 # modifying from the page
 # modifyin E
+# modifyin D
 
 A clean, end-to-end **MLOps project** that trains a **Random Forest** model on the **public Titanic dataset** and serves predictions through a **Dockerized FastAPI service**, with **Poetry** for dependency management.
 
