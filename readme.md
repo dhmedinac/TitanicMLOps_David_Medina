@@ -174,12 +174,12 @@ Example request body:
 
 ```json
 {
-  "Pclass": 3,
-  "Sex": "male",
-  "Age": 22,
-  "SibSp": 1,
-  "Parch": 0,
-  "Fare": 7.25
+  "pclass": 3,
+  "sex": "male",
+  "age": 22,
+  "sibSp": 1,
+  "parch": 0,
+  "fare": 7.25
 }
 ```
 
