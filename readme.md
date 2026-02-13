@@ -177,7 +177,7 @@ Example request body:
   "pclass": 3,
   "sex": "male",
   "age": 22,
-  "sibSp": 1,
+  "sibsp": 1,
   "parch": 0,
   "fare": 7.25
 }
