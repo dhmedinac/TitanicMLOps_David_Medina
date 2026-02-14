@@ -1,9 +1,10 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from src.predict import predict_passenger
+from src.predict import TitanicPredictor
 
 
 app = FastAPI(title="Titanic Survival API")
+predictor = TitanicPredictor()
 
 
 class Passenger(BaseModel):
@@ -22,4 +23,4 @@ def health():
 
 @app.post("/predict")
 def predict(passenger: Passenger):
-    return predict_passenger(passenger.model_dump())
+    return predictor.predict_passenger(passenger.model_dump())
