@@ -1,0 +1,20 @@
+# config/config.yaml
+paths:
+  data_path: "data/titanic.csv"
+  model_path: "models/model.pkl"
+
+# Parámetros EXCLUSIVOS del modelo
+model_hyperparameters:
+  n_estimators: 100
+  random_state: 42
+
+# Parámetros del proceso de entrenamiento
+train_params:
+  test_size: 0.2
+  random_state: 42
+
+data_features:
+  selected_columns: ['pclass', 'sex', 'age', 'sibsp', 'parch', 'fare']
+  mappings:
+    sex: {'male': 0, 'female': 1}
+  target: 'survived'

@@ -1,15 +1,22 @@
 import pandas as pd
 
-
 class TitanicPreprocessor:
+    def __init__(self, features, mappings, target):
+        self.features = features
+        self.mappings = mappings
+        self.target = target
+
     def preprocess(self, df: pd.DataFrame):
         df = df.copy()
 
+        # Manejo de nulos
         df['age'] = df['age'].fillna(df['age'].median())
-        df['sex'] = df['sex'].map({'male': 0, 'female': 1})
+        
+        # Uso de mapeos dinámicos desde la configuración
+        for col, mapping in self.mappings.items():
+            df[col] = df[col].map(mapping)
 
-        features = ['pclass', 'sex', 'age', 'sibsp', 'parch', 'fare']
-        X = df[features]
-        y = df['survived']
+        X = df[self.features]
+        y = df[self.target]
 
-        return X, y        
+        return X, y       

@@ -1,25 +1,29 @@
 import joblib
 import pandas as pd
-
-
-MODEL_PATH = 'models/model.pkl'
-
+import yaml
 
 
 class TitanicPredictor:
-    def __init__(self, model_path: str = MODEL_PATH):
-        self.model = joblib.load(model_path)
+    def __init__(self, config_path: str = 'config/config.yaml'):
+        with open(config_path, 'r') as f:
+            self.config = yaml.safe_load(f)
+        self.model = joblib.load(self.config['paths']['model_path'])
 
     def predict_passenger(self, data: dict):
         df = pd.DataFrame([data])
-        df['sex'] = df['sex'].map({'male': 0, 'female': 1})
+        
+        # Aplicar mapeos desde la configuración
+        mappings = self.config['data_features']['mappings']
+        for col, mapping in mappings.items():
+            if col in df.columns:
+                df[col] = df[col].map(mapping)
 
         prediction = self.model.predict(df)[0]
         probability = self.model.predict_proba(df)[0][1]
     
         return {
-        'survived': int(prediction),
-        'probability': round(float(probability), 4)
+            'survived': int(prediction),
+            'probability': round(float(probability), 4)
         }
 
     
