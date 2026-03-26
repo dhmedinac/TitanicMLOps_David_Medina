@@ -23,7 +23,7 @@ class TitanicPredictor:
     
         return {
             'survived': int(prediction),
-            'probability': round(float(probability), 4)
+            'the probability was': round(float(probability), 4)
         }
 
     
